@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>table</title>
+        <style> 
+        table,tr,th,td{
+            border:2px indigo solid;
+            border-collapse:collapse ;
+            padding:20px;
+            text-align: center;
+            font-size: 100%;
+            font-style: italic;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        tr:nth-child(even){
+            background-color:seashell;
+        }
+        tr:nth-child(odd){
+            background-color:aqua;
+        }
+        th{
+            background-color: green;
+            color:white;
+            text-align: center;
+        } 
+        td{
+            text-align: center;
+        }
+        tr:hover{
+            background-color: pink;
+        } 
+    </style>
+</head>
+<body>
+<h1>Student Scorecard</h1>
+    <table>
+        
+        <tr>
+        
+            <th>RollNumbe</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Scott</td>
+            <td>math</td>
+            <td>90</td>
+            <td>A</td>
+        </tr>
+        <tr><td>102</td>
+            <td>Adams</td>
+            <td>Science</td>
+            <td>85</td>
+            <td>B</td>
+
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>miller</td>
+            <td>English</td>
+            <td>92</td>
+            <td>A</td>
+        </tr>
+        <tr><td>104</td>
+            <td>David</td>
+            <td>History</td>
+            <td>78</td>
+            <td>C</td>
+
+        </tr>
+        <tr><td>105</td>
+            <td>James</td>
+            <td>Physics</td>
+            <td>88</td>
+            <td>B</td>
+        
+    </table>
+    
+</body>
+</html>
