@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment image Animation</title>
+    <style>
+         body{
+        text-align:center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 50px;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    img{
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.5s ease-in-out;
+    }
+    /* 1. bounce effect image */
+    .bounce:hover{
+        transform: scaleX(1.2);
+    }
+    /* 2. rotate effect image */
+    .rotate:hover{
+        transform: rotate(360deg);
+    }
+    /* 3. zoom in & out effect image*/
+    .zoom-animate{
+        animation: zoomeffect 3s infinite alternate ease-in-out;
+    }
+    @keyframes zoomeffect{
+        0%{transform: scale(1);}
+        100%{transform: scale(1.3);}  
+    }
+    </style>
+</head>
+<body>
+    <h1>Simple Image Animations</h1>
+    <div class="container">
+        <div>
+            <h2>Bounce Image</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTatzeLcbMdR6bmgw8cvMlOEPJuqq9n5U28uQ&s" alt="Bounce Image" class="bounce">
+        </div>
+        <div>
+            <h2>Rotate Image</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTatzeLcbMdR6bmgw8cvMlOEPJuqq9n5U28uQ&s" alt="Rotate Image" class="rotate">
+        </div>
+        <div>
+            <h2>Zoom IN & Out Image</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTatzeLcbMdR6bmgw8cvMlOEPJuqq9n5U28uQ&s" alt="Zoom-animation Image" class="zoom-animate">
+        </div>
+    </div>
+</body>
+</html>
