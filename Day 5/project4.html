@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: darkkhaki;
+            display: flex;
+        }
+        h1{
+            width: 500px;
+            padding-top: 10px;
+            padding-bottom: 100;
+            position: absolute;
+            left: 32%;
+            text-align: center;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            perspective: 1000px;
+        }
+        .card{
+            width: 23%;
+            height: 23%;
+            margin: 5px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .card:active{
+            transform: scale(0.95);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card.flip{
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+        .frontside, .backside{
+            background-color: bisque;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .frontside{
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Test your memory now!</h1>
+    <div class="container">
+        <div class="card" data-image="c++">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Y_67UPfUMyNAR29IJgE62QHaDr&pid=Api&P=0&h=180" class="frontside" alt="C++">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="c++">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Y_67UPfUMyNAR29IJgE62QHaDr&pid=Api&P=0&h=180" class="frontside" alt="C++">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="CSS">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.LzBZtra_HH07xF0NsbYYmwHaE8&pid=Api&P=0&h=180" class="frontside" alt="CSS">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="CSS">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.LzBZtra_HH07xF0NsbYYmwHaE8&pid=Api&P=0&h=180" class="frontside" alt="CSS">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="html">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.CYAMXqfgsWg3Ix91RJbbYAHaHa&pid=Api&P=0&h=180" class="frontside" alt="HTML5">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="html">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.CYAMXqfgsWg3Ix91RJbbYAHaHa&pid=Api&P=0&h=180" class="frontside" alt="HTML5">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="Java">
+            <img src="https://tse2.mm.bing.net/th?id=OIP._Lm_T3scKhVEVFC54gcRxwHaE8&pid=Api&P=0&h=180" class="frontside" alt="Java">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="Java">
+            <img src="https://tse2.mm.bing.net/th?id=OIP._Lm_T3scKhVEVFC54gcRxwHaE8&pid=Api&P=0&h=180" class="frontside" alt="Java">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="swift">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.eW1SPa2LbkyUgrG-cPM41wAAAA&pid=Api&P=0&h=180" class="frontside" alt="swift">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="swift">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.eW1SPa2LbkyUgrG-cPM41wAAAA&pid=Api&P=0&h=180" class="frontside" alt="swift">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="python">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.tjXP5XgyGImUb5vjE2V3XQHaHZ&pid=Api&P=0&h=180" class="frontside" alt="python">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="python">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.tjXP5XgyGImUb5vjE2V3XQHaHZ&pid=Api&P=0&h=180" class="frontside" alt="python">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="C">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.96hD_BAVqME5FjeQgQS0pgHaIi&pid=Api&P=0&h=180" class="frontside" alt="C">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="C">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.96hD_BAVqME5FjeQgQS0pgHaIi&pid=Api&P=0&h=180" class="frontside" alt="C">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="JS">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.BxxfUqJaajzMYP_dg3ynCQHaIW&pid=Api&P=0&h=180" class="frontside" alt="JS">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+        <div class="card" data-image="JS">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.BxxfUqJaajzMYP_dg3ynCQHaIW&pid=Api&P=0&h=180" class="frontside" alt="JS">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.Q_lH2fb6oDRUf3s3vYlayQHaL2&pid=Api&P=0&h=180" class="backside" alt="backLogo">
+        </div>
+    </div>
+    <script>
+        const cards=document.querySelectorAll(".card");
+        var firstCard,secondCard;
+        var lock=false;
+        var isFlipped=false;
+
+        cards.forEach(card=>
+            card.addEventListener("click",flip));
+        function flip(){
+            if(lock)
+            return;
+         if(this===firstCard)
+            return;
+        this.classList.add("flip");
+        if(!isFlipped){
+            isFlipped=true;
+            firstCard=this;
+            return;
+        }
+        secondCard=this;
+        check();
+        }
+        function check(){
+            var isMatch=firstCard.dataset.image===secondCard.dataset.image;
+            isMatch ? success() : failed();
+        }
+        function success(){
+            firstCard.removeEventListener("click",flip);
+            secondCard.removeEventListener("click",flip);
+            reset();
+        }
+        function failed(){
+            lock=true;
+            setTimeout(()=>{
+                firstCard.classList.remove("flip");
+                secondCard.classList.remove("flip");
+                reset();
+            }, 1000);
+        }
+    
+        function reset(){
+            [isFlipped,lock]=[false,false];
+            [firstCard,secondCard]=[null,null];
+        }
+        (function shuffle(){
+            cards.forEach(card=>{
+                var position=Math.floor(Math.random() * 16);
+                card.style.order=position;
+            });
+        })();
+    </script>
+</body>
+</html>
